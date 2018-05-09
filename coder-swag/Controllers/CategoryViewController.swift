@@ -28,6 +28,10 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         return DataService.instance.getCategories().count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell") as? CategoryCell {
             let category = DataService.instance.getCategories()[indexPath.row]
