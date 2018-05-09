@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		C6680BBF20A2CCE8003A91DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6680BBE20A2CCE8003A91DA /* AppDelegate.swift */; };
-		C6680BC120A2CCE8003A91DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6680BC020A2CCE8003A91DA /* ViewController.swift */; };
+		C6680BC120A2CCE8003A91DA /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6680BC020A2CCE8003A91DA /* CategoryViewController.swift */; };
 		C6680BC420A2CCE8003A91DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6680BC220A2CCE8003A91DA /* Main.storyboard */; };
 		C6680BC620A2CCE9003A91DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6680BC520A2CCE9003A91DA /* Assets.xcassets */; };
 		C6680BC920A2CCE9003A91DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6680BC720A2CCE9003A91DA /* LaunchScreen.storyboard */; };
 		C6680BD420A2CCE9003A91DA /* coder_swagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6680BD320A2CCE9003A91DA /* coder_swagTests.swift */; };
+		C6680BE320A2DBE9003A91DA /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6680BE220A2DBE9003A91DA /* CategoryCell.swift */; };
+		C6680BE520A2E826003A91DA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6680BE420A2E826003A91DA /* Category.swift */; };
+		C6680BE820A2EB29003A91DA /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6680BE720A2EB29003A91DA /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +31,7 @@
 /* Begin PBXFileReference section */
 		C6680BBB20A2CCE8003A91DA /* coder-swag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "coder-swag.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6680BBE20A2CCE8003A91DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C6680BC020A2CCE8003A91DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C6680BC020A2CCE8003A91DA /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		C6680BC320A2CCE8003A91DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C6680BC520A2CCE9003A91DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6680BC820A2CCE9003A91DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +39,9 @@
 		C6680BCF20A2CCE9003A91DA /* coder-swagTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "coder-swagTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6680BD320A2CCE9003A91DA /* coder_swagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coder_swagTests.swift; sourceTree = "<group>"; };
 		C6680BD520A2CCE9003A91DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6680BE220A2DBE9003A91DA /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		C6680BE420A2E826003A91DA /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		C6680BE720A2EB29003A91DA /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +83,11 @@
 		C6680BBD20A2CCE8003A91DA /* coder-swag */ = {
 			isa = PBXGroup;
 			children = (
+				C6680BE620A2EAFF003A91DA /* Services */,
+				C6680BE120A2CE8B003A91DA /* Controllers */,
+				C6680BDF20A2CE7A003A91DA /* Views */,
+				C6680BDE20A2CE6A003A91DA /* Models */,
 				C6680BBE20A2CCE8003A91DA /* AppDelegate.swift */,
-				C6680BC020A2CCE8003A91DA /* ViewController.swift */,
 				C6680BC220A2CCE8003A91DA /* Main.storyboard */,
 				C6680BC520A2CCE9003A91DA /* Assets.xcassets */,
 				C6680BC720A2CCE9003A91DA /* LaunchScreen.storyboard */,
@@ -94,6 +103,38 @@
 				C6680BD520A2CCE9003A91DA /* Info.plist */,
 			);
 			path = "coder-swagTests";
+			sourceTree = "<group>";
+		};
+		C6680BDE20A2CE6A003A91DA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C6680BE420A2E826003A91DA /* Category.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C6680BDF20A2CE7A003A91DA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C6680BE220A2DBE9003A91DA /* CategoryCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C6680BE120A2CE8B003A91DA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C6680BC020A2CCE8003A91DA /* CategoryViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C6680BE620A2EAFF003A91DA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C6680BE720A2EB29003A91DA /* DataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +238,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6680BC120A2CCE8003A91DA /* ViewController.swift in Sources */,
+				C6680BC120A2CCE8003A91DA /* CategoryViewController.swift in Sources */,
+				C6680BE320A2DBE9003A91DA /* CategoryCell.swift in Sources */,
 				C6680BBF20A2CCE8003A91DA /* AppDelegate.swift in Sources */,
+				C6680BE520A2E826003A91DA /* Category.swift in Sources */,
+				C6680BE820A2EB29003A91DA /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
