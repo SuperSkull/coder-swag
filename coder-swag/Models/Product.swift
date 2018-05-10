@@ -11,17 +11,20 @@ import Foundation
 struct Product {
     private(set) var title: String
     private(set) var price: String
+    private(set) var category: String
     private(set) var imageName: String
     
-    init(title: String, price: String, imageName: String) {
+    init(title: String, price: String, category: String, imageName: String) {
         self.title = title
         self.price = price
+        self.category = category
         self.imageName = imageName
     }
     
-    init(_ title: String, _ price: String, _ imageName: String) {
+    init(_ title: String, _ price: String, _ category: String, _ imageName: String) {
         self.title = title
         self.price = price
+        self.category = category
         self.imageName = imageName
     }
 }

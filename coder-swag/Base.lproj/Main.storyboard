@@ -74,21 +74,37 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABO-gl-OZO">
+                                <rect key="frame" x="320" y="-15" width="40" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" id="A9U-Kw-wYH"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="fby-dH-9dV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="60"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <segue destination="JWo-oE-QJb" kind="show" id="Fk6-jW-gWh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Zoe-uP-Yar" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9vB-wv-jRh"/>
                             <constraint firstItem="Zoe-uP-Yar" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="M5g-sx-WDA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ABO-gl-OZO" secondAttribute="trailing" constant="15" id="M6Q-Ex-fYd"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="U0b-Nh-jnO" secondAttribute="trailing" constant="20" symbolic="YES" id="QMZ-Ta-6xN"/>
                             <constraint firstItem="U0b-Nh-jnO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="UQ9-Nr-TZi"/>
+                            <constraint firstItem="ABO-gl-OZO" firstAttribute="centerY" secondItem="U0b-Nh-jnO" secondAttribute="centerY" id="UZD-0b-LpK"/>
                             <constraint firstItem="Zoe-uP-Yar" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yn5-sg-Qzh"/>
                             <constraint firstItem="U0b-Nh-jnO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="bd7-R4-hEZ"/>
                             <constraint firstItem="Zoe-uP-Yar" firstAttribute="top" secondItem="U0b-Nh-jnO" secondAttribute="bottom" constant="15" id="cE5-L7-vn0"/>
+                            <constraint firstItem="ABO-gl-OZO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="oJj-7w-W9T"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="CODER SWAG" id="6Bk-Bc-7Od"/>
                     <connections>
+                        <outlet property="btnAdd" destination="ABO-gl-OZO" id="XlL-Pt-h0e"/>
                         <outlet property="tblCategory" destination="Zoe-uP-Yar" id="Cfa-Jx-qKl"/>
                         <segue destination="7Tl-wc-zXe" kind="show" identifier="ProductsViewControllerSegue" id="ZAE-mH-LGK"/>
                     </connections>
@@ -96,6 +112,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="492" y="-711.09445277361328"/>
+        </scene>
+        <!--Add Product View Controller-->
+        <scene sceneID="hLt-lM-zzf">
+            <objects>
+                <viewController id="JWo-oE-QJb" customClass="AddProductViewController" customModule="coder_swag" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vgM-td-DcN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="G2W-m1-BUT"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7nx-D9-Uso" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="492" y="-27"/>
         </scene>
         <!--Products View Controller-->
         <scene sceneID="rCR-J5-6Ui">

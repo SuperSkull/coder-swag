@@ -19,6 +19,7 @@
 		C674182320A3E46600A0E247 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C674182220A3E46600A0E247 /* ProductCell.swift */; };
 		C674182520A3E97400A0E247 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = C674182420A3E97400A0E247 /* Product.swift */; };
 		C674182720A3F3E300A0E247 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C674182620A3F3E300A0E247 /* ProductsViewController.swift */; };
+		C674182920A41B2700A0E247 /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C674182820A41B2700A0E247 /* AddProductViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		C674182220A3E46600A0E247 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		C674182420A3E97400A0E247 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		C674182620A3F3E300A0E247 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
+		C674182820A41B2700A0E247 /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			children = (
 				C6680BC020A2CCE8003A91DA /* CategoryViewController.swift */,
 				C674182620A3F3E300A0E247 /* ProductsViewController.swift */,
+				C674182820A41B2700A0E247 /* AddProductViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				C6680BE520A2E826003A91DA /* Category.swift in Sources */,
 				C6680BE820A2EB29003A91DA /* DataService.swift in Sources */,
 				C674182520A3E97400A0E247 /* Product.swift in Sources */,
+				C674182920A41B2700A0E247 /* AddProductViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

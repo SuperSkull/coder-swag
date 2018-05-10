@@ -11,7 +11,8 @@ import UIKit
 class CategoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tblCategory: UITableView!
-
+    @IBOutlet weak var btnAdd: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
