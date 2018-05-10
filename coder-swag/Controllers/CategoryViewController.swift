@@ -51,6 +51,9 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let productViewController = segue.destination as? ProductsViewController {
+            let btnBackBar = UIBarButtonItem()
+            btnBackBar.title = ""
+            navigationItem.backBarButtonItem = btnBackBar
             assert(sender as? Category != nil)
             productViewController.initProducts(category: sender as! Category)
         }
