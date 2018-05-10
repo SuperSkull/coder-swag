@@ -16,7 +16,9 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         tblCategory.dataSource = self
-        tblCategory.delegate = self 
+        tblCategory.delegate = self
+        tblCategory.estimatedRowHeight = 150
+        tblCategory.rowHeight = UITableViewAutomaticDimension
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,8 +30,13 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         return DataService.instance.getCategories().count
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 150
+//    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let category = DataService.instance.getCategories()[indexPath.row]
+        performSegue(withIdentifier: "ProductsViewControllerSegue", sender: category)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -39,6 +46,13 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
             return cell
         } else {
             return CategoryCell()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let productViewController = segue.destination as? ProductsViewController {
+            assert(sender as? Category != nil)
+            productViewController.initProducts(category: sender as! Category)
         }
     }
 }
